@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <title>AirEnE</title>
+  </head>
+  <body>
+    <div id="details"></div>
+    <div id="simExp"></div>
+    <script src="/lib/react.development.js"></script>
+    <script src="/lib/react-dom.development.js"></script>
+    <script src="http://localhost:3004/bundle.js"></script>
+    <script src="http://localhost:3003/bundle.js"></script>
+
+    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+    <script>
+      // ReactDOM.render(
+      //   React.createElement(Details),
+      //   document.getElementById('details')
+      // );
+      ReactDOM.render(
+        React.createElement(SimilarExperience, {pathname:'/id/1'}),
+        document.getElementById('simExp')
+      );
+    </script>
+  </body>
+</html>
