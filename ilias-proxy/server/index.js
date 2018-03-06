@@ -27,10 +27,16 @@ app.use('/host', function(req,res) {
   request(newurl).pipe(res);
 });
 
+app.use('/reviews', function(req,res) {
+  var newurl = 'http://localhost:3005/host' + req.url;
+  console.log('CurrentURLHOST',req.url);
+  request(newurl).pipe(res);
+});
+
 
 //DOESNT APPEAR TO WORK
 //app.use('*', proxy('https://localhost:3001'));
-
+//might want to look into it
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`)
