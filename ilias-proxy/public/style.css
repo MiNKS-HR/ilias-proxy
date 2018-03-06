@@ -1,14 +1,3 @@
-#iteminfo {
-  display: block;
+#details {
+  padding-left: 15px;
 }
-
-#countdown {
-  margin-left: 5px;
-  display: inline-block;
-}
-
-#related {
-  margin: 10%;
-  display: block;
-}
-

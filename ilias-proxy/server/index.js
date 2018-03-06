@@ -16,13 +16,13 @@ app.use('/experience/similar', function(req,res) {
 });
 
 app.use('/experience/details', function(req,res) {
-  var newurl = 'http://localhost:3004/experience/details' + req.url;
+  var newurl = 'http://localhost:3005/experience/details' + req.url;
   console.log('CurrentURLDET',req.url);
   request(newurl).pipe(res);
 });
 
 app.use('/host', function(req,res) {
-  var newurl = 'http://localhost:3004/host' + req.url;
+  var newurl = 'http://localhost:3005/host' + req.url;
   console.log('CurrentURLHOST',req.url);
   request(newurl).pipe(res);
 });
