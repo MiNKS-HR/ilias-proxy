@@ -2,18 +2,78 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="/style.css">
+
+    <script src="/lib/react.development.js"></script>
+    <script src="/lib/react-dom.development.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+
+
     <title>AirEnE</title>
   </head>
   <body>
-    <div id="details"></div>
+    <div><img class="header" src="img/AirEnE Header.png"></div>
+      <div id="proxy_top_container">
+        <div id="proxy_sub_container">
+
+        <div id="details"></div>
+        <div id="gallery"></div>
+
+      <div class="col-lg-7 col-md-6 col-sm-12">
+      <div class="page-container">
+        <div class="title">Upcoming availability</div>
+        
+        <div id="app2"></div>
+
+        <!-- Button trigger modal -->
+        <div>
+        <div class="button-container">
+          <span class="button" data-toggle="modal" data-target="#Modal">See all available dates</span>
+        </div>
+      </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+                    <svg class="modal-close-button" viewBox="0 0 24 24" role="img" focusable="false"><path d="m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22" fill-rule="evenodd"></path></svg>
+                </button>
+                <br />
+                <div class="modal-title">When do you want to go?</div>
+                <div class="modal-subtitle">If you can’t find the dates you want, try contacting the host</div>
+                <div id="app"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="itemreviews"></div>
+
+    </div>
     <div id="simExp"></div>
-    <script src="/lib/react.development.js"></script>
-    <script src="/lib/react-dom.development.js"></script>
-    <script src="http://localhost:3005/bundle.js"></script>
+    </div>
+    <div><img class="footer" src="img/AirEnE Footer.png"></div>
+
+    <script src="http://localhost:3001/reviewsContent/bundle.js"></script>
+    <script src="http://localhost:3002/bundle.js"></script>
     <script src="http://localhost:3003/bundle.js"></script>
+    <script src="http://localhost:3004/app.js"></script>
+    <script src="http://localhost:3005/bundle.js"></script>
+ 
+
 
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
@@ -21,9 +81,41 @@
       //   React.createElement(Details),
       //   document.getElementById('details')
       // );
+      setTimeout(function() {
+      console.log('I found Sl?ck slider');
+      $('.selected').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        dots: false,
+        centerMode: true,
+        asNavFor: '.slider-nav'
+      });
+
+      $('.slider-nav').slick({
+        asNavFor: '.selected',
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: true,
+        // centerMode: false,
+        focusOnSelect: true,
+        // variableWidth: true,
+        infinite: true
+      });
+      },1);
+
       ReactDOM.render(
         React.createElement(SimilarExperience, {pathname:'/id/1'}),
         document.getElementById('simExp')
+      );
+      ReactDOM.render(
+        React.createElement(Gallery),
+        document.getElementById('gallery')
+      );
+      ReactDOM.render(
+        React.createElement(Reviews),
+        document.getElementById('itemreviews')
       );
     </script>
   </body>
