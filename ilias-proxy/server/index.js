@@ -9,19 +9,15 @@ const port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, '../public/')));
 var request = require('request');
 
-app.use('/experience/similar', function(req,res) {
-  var newurl = 'http://localhost:3003/experience/similar' + req.url;
+app.use('/similar', function(req,res) {
+  var newurl = 'http://localhost:3003/similar' + req.url;
   request(newurl).pipe(res);
 });
 
-app.use('/experience/details', function(req,res) {
-  var newurl = 'http://localhost:3005/experience/details' + req.url;
+app.use('/details', function(req,res) {
+  var newurl = 'http://localhost:3005/details' + req.url;
   request(newurl).pipe(res);
-});
-
-app.use('/host', function(req,res) {
-  var newurl = 'http://localhost:3005/host' + req.url;
-  request(newurl).pipe(res);
+  console.log(newurl);
 });
 
 app.use('/experience/availableDate/', function(req,res) {
@@ -41,7 +37,6 @@ app.use('/img/', function(req,res) {
 
 app.use('/reviews/', function(req,res) {
   var newurl = 'http://localhost:3001/reviews' + req.url;
-  console.log('CurrentURLHOST',req.url);
   request(newurl).pipe(res);
 });
 
