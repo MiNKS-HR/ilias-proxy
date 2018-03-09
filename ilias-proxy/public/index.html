@@ -50,11 +50,11 @@
     <div id="itemreviews"></div>
 
     </div>
-    <div id="simExp"></div>
+    <div id="similarExperience"></div>
     </div>
     <div><img class="footer" src="img/AirEnE Footer.png"></div>
 
-    <script src="http://localhost:3001/reviewsContent/bundle.js"></script>
+    <script src="/reviews/content/bundle.js"></script>
     <script src="http://localhost:3002/bundle.js"></script>
     <script src="/similar/content/bundle.js"></script>
     <script src="http://localhost:3004/app.js"></script>
@@ -93,17 +93,13 @@
       },1);
 
       ReactDOM.render(
-        React.createElement(SimilarExperience, {pathname:'/id/1'}),
-        document.getElementById('simExp')
-      );
-      ReactDOM.render(
         React.createElement(Gallery),
         document.getElementById('gallery')
       );
-      ReactDOM.render(
-        React.createElement(Reviews),
-        document.getElementById('itemreviews')
-      );
+      // ReactDOM.render(
+      //   React.createElement(Reviews),
+      //   document.getElementById('itemreviews')
+      // );
     </script>
   </body>
 </html>

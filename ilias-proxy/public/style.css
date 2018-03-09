@@ -6,16 +6,21 @@
   width: 100%;
 }
 
+.num-photos {
+  width: 300px;
+}
+
 #proxy_top_container {
   margin: 0 auto;
   display: block;
-  width: 80%;
+  width: 75%;
 }
 
-#proxy_top_container {
+#proxy_sub_container {
 }
 
 #details {
+  width: 670px;
   padding-left: 6px;
   padding-bottom: 25px;
   padding-top: 10px;
@@ -23,20 +28,27 @@
 }
 
 #app2 {
-  max-width: 550px;
+  width:670px;
 }
 
 #itemreviews {
   width: 670px;
-  padding-left: 15px;
+  padding-top: 25px;
 }
 
 #gallery {
   position: -webkit-sticky;
   position: sticky;
   top: 125px;
-  margin-left: 162px;
+  margin-left: 40px;
   float: left;
+}
+
+@media screen and (max-width: 1430px) {
+  #gallery {
+    position: inherit;
+    display:block;
+  }
 }
 
 .title {
