@@ -29,8 +29,18 @@
       <div id="proxy_sub_container">
 
         <div id="details"></div>
-        <div id="gallery"></div>
-        <div id="app"></div>
+        <!-- <div id="gallery"></div> -->
+
+        <div id="gallery" >
+          <img class="gallery" src="img/AirEnE gallery.png">
+        </div>
+
+        <!-- <div id="app"></div> -->
+
+        <div>
+          <img id="app" src="img/AirEnE Availability.png">
+        </div>
+
         <div id="itemreviews"></div>
 
       </div>
@@ -42,43 +52,43 @@
     </div>
 
     <script src="/reviews/content/bundle.js"></script>
-    <script src="http://localhost:3002/bundle.js"></script>
+    <!-- <script src="http://localhost:3002/bundle.js"></script> -->
     <script src="/similar/content/bundle.js"></script>
-    <script src="http://localhost:3004/app.js"></script>
+    <!-- <script src="http://localhost:3004/app.js"></script> -->
     <script src="/details/content/bundle.js"></script>
  
 
 
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
-      setTimeout(function() {
-      console.log('I found Sl?ck slider');
-      $('.selected').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        dots: false,
-        centerMode: true,
-        asNavFor: '.slider-nav'
-      });
+      // setTimeout(function() {
+      // console.log('I found Sl?ck slider');
+      // $('.selected').slick({
+      //   slidesToShow: 1,
+      //   slidesToScroll: 1,
+      //   arrows: false,
+      //   fade: true,
+      //   dots: false,
+      //   centerMode: true,
+      //   asNavFor: '.slider-nav'
+      // });
 
-      $('.slider-nav').slick({
-        asNavFor: '.selected',
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        dots: true,
-        // centerMode: false,
-        focusOnSelect: true,
-        // variableWidth: true,
-        infinite: true
-      });
-      },1);
+      // $('.slider-nav').slick({
+      //   asNavFor: '.selected',
+      //   slidesToShow: 4,
+      //   slidesToScroll: 1,
+      //   dots: true,
+      //   // centerMode: false,
+      //   focusOnSelect: true,
+      //   // variableWidth: true,
+      //   infinite: true
+      // });
+      // },1);
 
-      ReactDOM.render(
-        React.createElement(Gallery),
-        document.getElementById('gallery')
-      );
+      // ReactDOM.render(
+      //   React.createElement(Gallery),
+      //   document.getElementById('gallery')
+      // );
     </script>
   </body>
 </html>

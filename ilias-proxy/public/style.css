@@ -6,14 +6,18 @@
   width: 100%;
 }
 
+#similarExperience {
+  padding-left: 10.5%;
+}
+
 .num-photos {
   width: 300px;
 }
 
-#proxy_top_container {
+#proxy_sub_container {
   margin: 0 auto;
   display: block;
-  width: 75%;
+  width: 77%;
 }
 
 #proxy_sub_container {
@@ -27,8 +31,8 @@
   float: left;
 }
 
-#app2 {
-  width:670px;
+#app {
+  width:685px;
 }
 
 #itemreviews {
@@ -36,15 +40,19 @@
   padding-top: 25px;
 }
 
+.gallery {
+  width: 250px;
+}
+
 #gallery {
   position: -webkit-sticky;
   position: sticky;
   top: 125px;
-  margin-left: 40px;
+  margin-left: 80px;
   float: left;
 }
 
-@media screen and (max-width: 1430px) {
+@media screen and (max-width: 1290px) {
   #gallery {
     position: inherit;
     display:block;

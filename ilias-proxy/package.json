@@ -1,22 +1,21 @@
 {
-  "name": "AirEnE-Proxy",
-  "version": "1.0",
+  "name": "aireneproxy",
+  "version": "1.0.0",
   "description": "Proxy server for AirEnE HR Project",
   "author": "Ilias Schulz",
-  "license": "",
+  "license": "UNLICENSED",
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "node server/index.js"
+  },
   "dependencies": {
     "express": "^4.16.2",
-    "express-http-proxy": "^1.1.0",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.1",
     "path": "^0.12.7",
     "request": "^2.83.0"
   },
-  "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+  "devDependencies": {}
 }

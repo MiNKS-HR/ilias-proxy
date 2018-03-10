@@ -23,6 +23,11 @@ app.use('/details', function(req,res) {
   request(newurl).pipe(res);
 });
 
+app.use('/reviews/', function(req,res) {
+  var newurl = 'http://54.153.115.227:80/reviews' + req.url;
+  request(newurl).pipe(res);
+});
+
 // app.use('/experience/availableDate/', function(req,res) {
 //   var newurl = 'http://localhost:3002/experience/availableDate' + req.url;
 //   request(newurl).pipe(res);
@@ -38,10 +43,6 @@ app.use('/details', function(req,res) {
 //   request(newurl).pipe(res);
 // });
 
-app.use('/reviews/', function(req,res) {
-  var newurl = 'http://54.153.115.227:80/reviews' + req.url;
-  request(newurl).pipe(res);
-});
 
 
 app.listen(port, () => {
