@@ -14,7 +14,7 @@ app.use('/:id', express.static(path.join(__dirname, '../public/')));
 
 
 app.use('/similar', function(req,res) {
-  var newurl = 'http://13.56.28.204:80/similar' + req.url;
+  var newurl = 'http://54.241.103.135:80/similar' + req.url;
   request(newurl).pipe(res);
 });
 
